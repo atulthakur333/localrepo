@@ -11,9 +11,17 @@
     margin: 0;
     padding: 0;
     display: flex;
+    feature-2-footer
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+  }
+  .form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
   }
   .name-container {
     background-color: #fff;
@@ -24,7 +32,7 @@
   }
   h1 {
     font-size: 2.5rem;
-    color: #c42f02;
+    color: #333;
     text-align: center;
     margin: 0;
     text-transform: uppercase;
@@ -36,9 +44,40 @@
     text-align: center;
     padding: 10px;
   }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
 </style>
 </head>
 <body>
+  <div class="form-container">
+    <form id="basic-details-form">
+      <input type="text" name="first-name" placeholder="First Name" required>
+      <input type="text" name="last-name" placeholder="Last Name" required>
+      <input type="text" name="email" placeholder="Email" required>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
   <div class="name-container">
     <h1>Welcome Back Atul!!</h1>
   </div>
@@ -47,3 +86,4 @@
   </footer>
 </body>
 </html>
+
